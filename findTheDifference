@@ -1,0 +1,12 @@
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        int anss = 0,anst = 0;
+        for(auto ch: s)
+            anss += ch;
+        for(auto ch: t)
+            anst += ch;
+        return anst - anss;
+
+    }
+};
