@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int titleToNumber(string columnTitle) {
+        int ans = 0;
+        long multi = 1;
+        for(int i = columnTitle.size() - 1; i >= 0; --i)
+        {
+            int j = columnTitle[i] - 'A' + 1;
+            ans += j * multi;
+            multi *= 26;
+        }
+        return ans;
+
+    }
+};
